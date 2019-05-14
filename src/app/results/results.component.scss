@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  padding: 0 16px 16px 16px;
+}
+
+.results__title {
+  text-align: center;
+}
+
+.results__table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.results__column-name {
+  width: 50%;
+  text-align: left;
+}
+
+.results__column-role {
+  width: 25%;
+  text-align: center;
+}
+
+.results__column-approved {
+  width: 25%;
+  text-align: center;
+}
+
+.results__icon-yes {
+  color: #B9F6CA;
+}
+
+.results__icon-no {
+  color: #FF80AB;
+}
+
+.results__headers {
+  text-align: center;
+}
+
+
+.results__row {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #FAFAFA;
+  }
+}

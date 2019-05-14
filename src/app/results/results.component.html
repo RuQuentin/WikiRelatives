@@ -1,0 +1,50 @@
+<h2 class="results__title">List of the relatives of {{ personInfo.name }}</h2>
+
+<table mat-table [dataSource]="personInfo.relatives"
+  class="mat-elevation-z8 results__table">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef
+      class="results__column-name results__headers"> Name
+    </th>
+    <td mat-cell *matCellDef="let element" class="results__column-name">
+      {{element.name}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef
+      class="results__column-role results__headers"> Role </th>
+    <td mat-cell *matCellDef="let element" class="results__column-role">
+      {{element.role}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="approved">
+    <th mat-header-cell *matHeaderCellDef
+      class="results__column-approved results__headers"> Approved </th>
+    <td mat-cell *matCellDef="let element" class="results__column-approved">
+      <div [ngSwitch]="element.approved" class="">
+        <span *ngSwitchCase="true">
+          <i class="material-icons results__icon-yes">
+            check_circle
+          </i>
+        </span>
+        <span *ngSwitchCase="false">
+          <i class="material-icons results__icon-no">
+            cancel
+          </i>
+        </span>
+        <span *ngSwitchDefault>
+          <i class="material-icons">
+            priority_high
+          </i>
+        </span>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="headers"></tr>
+  <tr mat-row *matRowDef="let row; columns: headers;"
+    (click)="navigateHref(row.link)" class="results__row"></tr>
+</table>

@@ -1,0 +1,16 @@
+mat-toolbar {
+  white-space: normal;
+}
+
+.header__title {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+.header__description {
+  display: inline-block;
+  font-size: 14px;
+  max-width: 500px;
+  line-height: 1.2;
+}
