@@ -14,7 +14,10 @@ Angular Material was used for basic styles.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+
 ## Test the service online
 
-...
+You may try how the application work by the following link
+
+https://ruquentin.github.io/WikiRelatives/dist/TestCheckRelatives/
 
